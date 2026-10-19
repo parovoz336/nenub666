@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Signal",
+    "genre": "Sci-Fi",
+    "year": 2025
+  },
+  {
+    "title": "Old Moon",
+    "genre": "Sci-Fi",
+    "year": 2018
+  },
+{
+    "title": "Forrest Gump",
+    "genre":"Comedy",
+    "year":1994
+},
+{
+    "title":"Saw 2",
+    "genre":"Horror",
+    "year":2005
+}
+
+]

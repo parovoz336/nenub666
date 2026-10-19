@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Bolt",
+    "battery": 9
+  },
+  {
+    "name": "Nova",
+    "battery": 18
+  },
+  {
+    "name": "Pixel",
+    "battery": 73
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "topic": "Не входит в игру",
+    "priority": 5,
+    "status": "open"
+  },
+  {
+    "topic": "Смена ника",
+    "priority": 2,
+    "status": "closed"
+  }
+]
