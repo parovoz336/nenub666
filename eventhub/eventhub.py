@@ -54,3 +54,39 @@ def sort_by_popularity(data):
 # 2. После каждого успешного изменения вызывайте save_db(data). Неправильное число или пункт меню не должны завершать программу.
 # 3. Заполните README.md: назначение проекта, файлы, запуск и возможности.
 # 4. Проверьте git status, выполните git add ., создайте итоговый commit и отправьте проект командой git push. Ветки не используйте.
+
+
+
+
+
+
+
+
+import os
+from pathlib import Path
+
+import psycopg2
+from dotenv import load_dotenv
+
+
+# 05 Подключение из Python
+# 1. Реализуйте connect_db в db.py с загрузкой .env рядом с файлом.
+# 2. Подключитесь через Psycopg 3 с dict_row и выполните 
+# SELECT 1 AS result.
+# 3. При отсутствии DATABASE_URL выдайте понятную ошибку.
+# Закройте соединение через with.
+
+def connect_db():
+    load_dotenv(Path(__file__).with_name(".env"))
+    url = os.getenv("DATABASE_URL")
+    if not url:
+        return ValueError("Добавьте DATABASE_URL в .env")
+    return psycopg2.connect(url, connect_timeout=15 )
+    
+
+with connect_db() as conn, conn.cursor() as cur:
+    cur.execute("SELECT 1 AS result")
+    print(cur.fetchone()[0])
+
+
+connect_db()
